@@ -1,5 +1,5 @@
 import { c as createComponent, b as createAstro, r as renderComponent, a as renderTemplate, m as maybeRenderHead, d as addAttribute, e as renderTransition } from '../../chunks/astro/server_C_RyepSS.mjs';
-import { $ as $$Layout } from '../../chunks/Layout_BSG4dqy5.mjs';
+import { $ as $$Layout } from '../../chunks/Layout_2-Y9T64q.mjs';
 import { F as FIGHTERS } from '../../chunks/fighters_cYpoW6kL.mjs';
 /* empty css                                    */
 export { renderers } from '../../renderers.mjs';
