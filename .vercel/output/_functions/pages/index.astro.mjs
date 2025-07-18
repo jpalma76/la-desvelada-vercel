@@ -1,7 +1,7 @@
 import { c as createComponent, b as createAstro, m as maybeRenderHead, d as addAttribute, a as renderTemplate, r as renderComponent, g as renderScript, e as renderTransition } from '../chunks/astro/server_C_RyepSS.mjs';
 import { F as FIGHTERS } from '../chunks/fighters_cYpoW6kL.mjs';
 /* empty css                                 */
-import { $ as $$Layout } from '../chunks/Layout_2-Y9T64q.mjs';
+import { $ as $$Layout } from '../chunks/Layout_Bj6UckRA.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro$1 = createAstro();
@@ -30,7 +30,7 @@ const $$Hero = createComponent(($$result, $$props, $$slots) => {
   const firstRowRight = FIGHTERS.slice(3, 6);
   const SecondRowLeft = FIGHTERS.slice(6, 10);
   const SecondRowRight = FIGHTERS.slice(10);
-  return renderTemplate`${maybeRenderHead()}<section class="relative flex min-h-screen justify-center w-full px-" id="hero"> <div class="absolute mt-24 z-10 w-full h-44 transparent flex justify-center items-center"> <p class="font-bold text-white/50 italic">
+  return renderTemplate`${maybeRenderHead()}<section class="relative flex min-h-screen justify-center w-full px-" id="hero"> <div class="absolute mt-24 z-10 w-full h-44 flex justify-center items-center"> <p class="text-xl font-semibold text-white/50 opacity-70 italic">
 Esta es una copia no oficial de la Página de la Velada V hecha a modo de
       practica.
 </p> </div> <div class="bg-[url('/images/hero.webp')] bg-cover bg-center w-full mask-fade-bottom absolute inset-0"></div> <div class="relative flex flex-col items-center justify-end p-y-8 w-full"> <div id="landing" class="absolute inset-0 flex flex-col items-center justify-center w-full text-center"> <h3 class="font-light text-xl text-dark-magenta py-2 leading-[100%] animate-fade-in animate-delay-300"> <strong>26</strong> DE<br><strong>JULIO</strong> </h3> <figure class="relative flex my-5 animate-fade-in"> <img class="w-64 h-auto z-10" src="/images/logo.webp" alt="La Velada del año V"> <div class="absolute bg-pink-400/70 blur-2xl z-0 size-64 top-0"></div> </figure> <h3 class="font-light text-theme-seashell leading-5 mt-2 animate-fade-in animate-delay-500">
