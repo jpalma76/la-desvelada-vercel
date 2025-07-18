@@ -12,17 +12,10 @@ export default defineConfig({
     plugins: [tailwindcss()],
 
     build: {
-      assetsInlineLimit: 0,
-      rollupOptions: {
-        output: {
-          entryFileNames: `assets/[name].[hash].js`,
-          chunkFileNames: `assets/[name].[hash].js`,
-          assetFileNames: `assets/[name].[hash].[ext]`,
-        },
-      },
+      cssCodeSplit: false // para evitar que el CSS se divida en muchos archivos
     },
   },
 
   adapter: vercel(),
-  
+
 });
