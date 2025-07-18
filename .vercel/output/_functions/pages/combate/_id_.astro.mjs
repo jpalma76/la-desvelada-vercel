@@ -1,4 +1,4 @@
-import { c as createComponent, a as renderTemplate } from '../../chunks/astro/server_C_RyepSS.mjs';
+import { c as createComponent, a as renderTemplate } from '../../chunks/astro/server_CKB3Lo3a.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$id = createComponent(($$result, $$props, $$slots) => {

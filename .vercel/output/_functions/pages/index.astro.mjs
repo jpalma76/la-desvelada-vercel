@@ -1,10 +1,10 @@
-import { c as createComponent, b as createAstro, m as maybeRenderHead, d as addAttribute, a as renderTemplate, r as renderComponent, g as renderScript, e as renderTransition } from '../chunks/astro/server_C_RyepSS.mjs';
+import { b as createAstro, c as createComponent, m as maybeRenderHead, d as addAttribute, a as renderTemplate, r as renderComponent, g as renderScript, e as renderTransition } from '../chunks/astro/server_CKB3Lo3a.mjs';
 import { F as FIGHTERS } from '../chunks/fighters_cYpoW6kL.mjs';
 /* empty css                                 */
-import { $ as $$Layout } from '../chunks/Layout_Bj6UckRA.mjs';
+import { $ as $$Layout } from '../chunks/Layout_ChRFczWZ.mjs';
 export { renderers } from '../renderers.mjs';
 
-const $$Astro$1 = createAstro();
+const $$Astro$1 = createAstro("https://la-desvelada-vercel.vercel.app/");
 const $$SectionTitle = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$SectionTitle;
@@ -17,7 +17,7 @@ const $$Countdown = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<section class="w-full h-auto py-48! flex flex-col gap-y-10 justify-center items-center"> ${renderComponent($$result, "SectionTitle", $$SectionTitle, { "title": "Cuenta atr\xE1s para el evento..." })} <div class="flex flex-row max-sm:mx-0 mx-auto gap-x-2 text-primary uppercase font-semibold"${addAttribute(TIMESTAMP_END, "data-date")}> <div class="flex flex-col justify-center text-center items-center gap-y-2 max-sm:w-[60px] md:28 lg:w-[120px]"> <span class="text-2xl md:text-3xl lg:text-4xl tabular-nums text-center" data-days></span> <span class="max-sm:text-[8px] max-md:text-sm text-center">Días</span> </div> <span aria-hidden="true" class="h-full flex items-center text-xl">:</span> <div class="flex flex-col justify-center text-center items-center gap-y-2 max-sm:w-[60px] md:28 lg:w-[120px]"> <span class="text-2xl md:text-3xl lg:text-4xl tabular-nums text-center" data-hours></span> <span class="max-sm:text-[8px] max-md:text-sm text-center">Horas</span> </div> <span aria-hidden="true" class="mt-1 text-xl">:</span> <div class="flex flex-col justify-center items-center text-center gap-y-2 max-sm:w-[60px] md:28 lg:w-[120px]"> <span class="text-2xl md:text-3xl lg:text-4xl tabular-nums text-center" data-minutes></span> <span class="max-sm:text-[8px] max-md:text-sm text-center">Minutos</span> </div> <span aria-hidden="true" class="mt-1 text-xl">:</span> <div class="flex flex-col justify-center items-center text-center gap-y-2 max-sm:w-[60px] md:28 lg:w-[120px]"> <span class="text-2xl md:text-3xl lg:text-4xl tabular-nums text-center" data-seconds></span> <span class="max-sm:text-[8px] max-md:text-sm text-center">Segundos</span> </div> </div> <span aria-hidden="true" class="mt-1 text-xl italic">...para mi cumpleaños 🥳🥳🥳</span> </section> ${renderScript($$result, "C:/Users/axl_7/Escritorio/developer/la-desvelada-vercel/src/components/Countdown.astro?astro&type=script&index=0&lang.ts")}`;
 }, "C:/Users/axl_7/Escritorio/developer/la-desvelada-vercel/src/components/Countdown.astro", void 0);
 
-const $$Astro = createAstro();
+const $$Astro = createAstro("https://la-desvelada-vercel.vercel.app/");
 const $$BoxerCard = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$BoxerCard;
