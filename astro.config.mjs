@@ -9,6 +9,7 @@ import vercel from "@astrojs/vercel";
 // https://astro.build/config
 export default defineConfig({
   output: "server",
+  
   vite: {
     plugins: [tailwindcss()],
   },
@@ -16,7 +17,9 @@ export default defineConfig({
   build: {
     inlineStylesheets: 'always'
   },
-  site: 'https://la-desvelada-vercel.vercel.app/', // Reemplaza con tu URL
+
+  site: 'https://la-desvelada-vercel.vercel.app/',
+  
   integrations: [sitemap()],
 
   adapter: vercel(),
