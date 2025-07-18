@@ -1,5 +1,5 @@
 import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_CKB3Lo3a.mjs';
-import { $ as $$Layout } from '../chunks/Layout_ChRFczWZ.mjs';
+import { $ as $$Layout } from '../chunks/Layout_CmLhD9MW.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$LaPorra = createComponent(($$result, $$props, $$slots) => {

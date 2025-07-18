@@ -1,7 +1,7 @@
 import { b as createAstro, c as createComponent, m as maybeRenderHead, d as addAttribute, a as renderTemplate, r as renderComponent, g as renderScript, e as renderTransition } from '../chunks/astro/server_CKB3Lo3a.mjs';
 import { F as FIGHTERS } from '../chunks/fighters_cYpoW6kL.mjs';
 /* empty css                                 */
-import { $ as $$Layout } from '../chunks/Layout_ChRFczWZ.mjs';
+import { $ as $$Layout } from '../chunks/Layout_CmLhD9MW.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro$1 = createAstro("https://la-desvelada-vercel.vercel.app/");
