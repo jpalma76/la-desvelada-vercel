@@ -15,5 +15,8 @@
     "@vercel/speed-insights": "^1.2.0",
     "astro": "^5.11.2",
     "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@astrojs/sitemap": "^3.4.1"
   }
 }

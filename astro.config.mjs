@@ -1,4 +1,5 @@
 // @ts-check
+import sitemap from '@astrojs/sitemap';
 import { defineConfig } from "astro/config";
 
 import tailwindcss from "@tailwindcss/vite";
@@ -10,11 +11,13 @@ export default defineConfig({
   output: "server",
   vite: {
     plugins: [tailwindcss()],
-
-    build: {
-      cssCodeSplit: false // para evitar que el CSS se divida en muchos archivos
-    },
   },
+  
+  build: {
+    inlineStylesheets: 'always'
+  },
+  site: 'https://la-desvelada-vercel.vercel.app/', // Reemplaza con tu URL
+  integrations: [sitemap()],
 
   adapter: vercel(),
 
