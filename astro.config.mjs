@@ -1,5 +1,4 @@
 // @ts-check
-import sitemap from '@astrojs/sitemap';
 import { defineConfig } from "astro/config";
 
 import tailwindcss from "@tailwindcss/vite";
@@ -20,8 +19,6 @@ export default defineConfig({
 
   site: 'https://la-desvelada-vercel.vercel.app/',
   
-  integrations: [sitemap()],
-
   adapter: vercel(),
 
 });

@@ -12,19 +12,27 @@ import LaVeladaIcon from "@/icons/LaVeladaIcon.astro";
       <a
         href="/la-porra"
         class="inline-block text-theme-seashell hover:underline"
+        title="Haz tu porra"
       >
         HAZ TU <strong>PORRA</strong>
       </a>
       <a
         href="/combates"
         class="inline-block text-theme-seashell hover:underline"
+        title="Ver combates"
       >
         VER <strong>COMBATES</strong>
+        <span class="sr-only">Ver combates</span>
       </a>
     </div>
 
     <div class="w-20 h-16 fixed top-0 flex justify-center items-center z-50">
-      <a class="hover:scale-125 hover:opacity-70" href="/">
+      <a
+        class="hover:scale-125
+        hover:opacity-70"
+        href="/"
+        title="Icono de la Velada del año V"
+      >
         <LaVeladaIcon class="size-6" />
       </a>
     </div>
@@ -37,12 +45,24 @@ import LaVeladaIcon from "@/icons/LaVeladaIcon.astro";
       >
         COMPRA LAS <strong>ENTRADAS</strong>
       </span>
-      <span class="text-sm text-yellow-500 mt-1">Próximamente</span>
+      <span class="text-xs text-yellow-500 mt-1">Próximamente</span>
     </div>
   </nav>
 </header>
 
 <style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
   header {
     background: transparent;
     animation: header-blur-scroll 0.3s linear both;

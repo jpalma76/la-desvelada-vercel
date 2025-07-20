@@ -32,20 +32,7 @@ export const prerender = false;
               Siempre gano; y si no, es porque no ha acabado.
             </p>
           </div>
-          <div
-            class="w-[90%] h-24 flex items-center justify-center rounded-tr-2xl rounded-bl-2xl bg-[#c792aa]"
-          >
-            <p class="font-md mx-3">
-              Siempre gano; y si no, es porque no ha acabado.
-            </p>
-          </div>
-          <div
-            class="w-[90%] h-24 flex items-center justify-center rounded-tr-2xl rounded-bl-2xl bg-[#c792aa]"
-          >
-            <p class="font-md mx-3">
-              Siempre gano; y si no, es porque no ha acabado.
-            </p>
-          </div>
+
         </div>
         <!-- boxer container (luchador) -->
         <div
@@ -53,7 +40,7 @@ export const prerender = false;
         >
           <!-- Luchador -->
           <img
-            transition:name={`image-${id}`}
+            aria-label={`Imagen de ${name}`}
             data-id={`hero-image-${id}`}
             src={`/images/fighters/big/${id}.webp`}
             alt={fighter?.name}
@@ -61,10 +48,11 @@ export const prerender = false;
           />
           <!-- Nombre -->
           <img
+            aria-label={`Nombre de ${name}`}
             data-id={`hero-text-${id}`}
             src={`/images/fighters/text/${id}.webp`}
             alt={"Nombre de " + name}
-            class="relative h-auto w-full max-w-[350px] z-10 hover:scale-125 transition-[.6s]"
+            class="relative h-auto w-full max-w-[400px] z-10"
           />
         </div>
       </div>
