@@ -6,25 +6,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html,
 body {
   font-family: "Anisette", sans-serif;
   font-display: swap;
   background-color: var(--color-theme-tickle-me-pink);
 }
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
 
 @theme {
   --color-dark-magenta: #2a1f26;
@@ -72,4 +59,11 @@ body {
 
 @utility mask-fade-bottom {
   mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+@utility background-image-theme {
+  background-image: url('/images/hero.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

@@ -1,0 +1,79 @@
+---
+import LaVeladaIcon from "@/icons/LaVeladaIcon.astro";
+
+// se eliminó el link a combates porque todavía no existe
+---
+
+<header class="fixed top-0 w-full z-30 text-white mx-auto">
+  <nav
+    class="w-full h-auto flex items-center px-6 py-4! text-sm font-light justify-around mx-auto"
+  >
+    <div class="hidden md:flex flex-row gap-4 justify-start">
+      <a
+        href="/la-porra"
+        class="inline-block text-theme-seashell hover:underline"
+      >
+        HAZ TU <strong>PORRA</strong>
+      </a>
+      <a
+        href="/combates"
+        class="inline-block text-theme-seashell hover:underline"
+      >
+        VER <strong>COMBATES</strong>
+      </a>
+    </div>
+
+    <div class="w-20 h-16 fixed top-0 flex justify-center items-center z-50">
+      <a class="hover:scale-125 hover:opacity-70" href="/">
+        <LaVeladaIcon class="size-6" />
+        <span class="sr-only">Icono de la velada V</span>
+      </a>
+    </div>
+
+    <div
+      class="w-auto hidden md:flex flex-col items-center justify-center text-center"
+    >
+      <span
+        class="inline-block text-theme-seashell opacity-70 cursor-not-allowed"
+      >
+        COMPRA LAS <strong>ENTRADAS</strong>
+      </span>
+      <span class="text-xs text-yellow-500 mt-1">Próximamente</span>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  header {
+    background: transparent;
+    animation: header-blur-scroll 0.3s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 250px;
+    border-bottom: 1px solid transparent;
+  }
+
+  @keyframes header-blur-scroll {
+    0% {
+      backdrop-filter: blur(0);
+      background: transparent;
+    }
+    100% {
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.5);
+      padding-bottom: var(--spacing-6);
+      border-bottom-color: black;
+    }
+  }
+</style>

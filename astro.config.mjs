@@ -17,8 +17,6 @@ export default defineConfig({
     inlineStylesheets: 'always'
   },
 
-  site: 'https://la-desvelada-vercel.vercel.app/',
-  
   adapter: vercel(),
 
 });

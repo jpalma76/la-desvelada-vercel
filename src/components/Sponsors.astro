@@ -18,7 +18,6 @@ const secondRow = SPONSORS.slice(5);
           aria-label={`Sitio web de ${name}`}
           href={url}
           target="_blank"
-          title={`Sitio web de {name}`}
           class="w-auto h-4 hover:scale-125 transition text-dark-magenta flex justify-center items-center"
         >
           <image.logo class="h-6 w-auto object-contain" />
@@ -31,7 +30,6 @@ const secondRow = SPONSORS.slice(5);
       secondRow.map(({ url, image, name }) => (
         <a
           aria-label={`Sitio web de ${name}`}
-          title={`Sitio web de {name}`}
           href={url}
           target="_blank"
           class="w-auto h-4 hover:scale-125 transition text-dark-magenta flex justify-center items-center"
