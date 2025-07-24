@@ -10,7 +10,7 @@ const TIMESTAMP_END = 1761264420000;
   <div class="w-mfull gap-x-2 flex flex-row" data-date={TIMESTAMP_END}>
     <div class="boxer-date">
       <span class="text-5xl font-normal text-center" data-days></span>
-      <span class="text-[9px] text-center">Días</span>
+      <span class="text-[9px] text-center">dias</span>
     </div>
 
     <div class="boxer-date">
@@ -33,7 +33,7 @@ const TIMESTAMP_END = 1761264420000;
   >
 </section>
 
-<script>
+<script is:inline>
   const SECOND = 1000;
   const MINUTE = SECOND * 60;
   const HOUR = MINUTE * 60;
@@ -74,7 +74,7 @@ const TIMESTAMP_END = 1761264420000;
 
     setInterval(updateCountdown, SECOND);
   }
-  init(); // llamado a la función para iniciar el contador
+
 </script>
 
 <style is:inline>
@@ -93,4 +93,5 @@ const TIMESTAMP_END = 1761264420000;
     justify-content: center;
     gap: 2px;
   }
+  init();
 </style>
