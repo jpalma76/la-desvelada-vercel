@@ -7,8 +7,8 @@ interface Props {
 const { class: className, title } = Astro.props
 ---
 
-<h2 class:list={[`text-dark-magenta w-full mb-4 flex justify-center items-center`, className]}>
+<h2 class:list={[`text-dark-magenta w-full my-10 flex justify-center items-center`, className]}>
   <div class="block sm:inline">
-    <strong class="lowercase italic text-center max-sm:text-xl md:text-2xl text-3xl font-semibold text-balance">{title}</strong>
+    <strong class="lowercase italic text-center max-sm:text-base md:text-2xl text-3xl font-semibold text-balance">{title}</strong>
   </div>
 </h2>
