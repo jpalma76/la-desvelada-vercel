@@ -33,48 +33,65 @@ const TIMESTAMP_END = 1761264420000;
   >
 </section>
 
-<script is:inline>
-  const SECOND = 1000;
-  const MINUTE = SECOND * 60;
-  const HOUR = MINUTE * 60;
-  const DAY = HOUR * 24;
+<script is:inline define:vars={{ timestamp: TIMESTAMP_END }}>
+  // Función para inicializar el contador
+  function initCountdown() {
+    const SECOND = 1000;
+    const MINUTE = SECOND * 60;
+    const HOUR = MINUTE * 60;
+    const DAY = HOUR * 24;
 
-  export function init() {
     const $countdown = document.querySelector("[data-date]");
-    if (!$countdown) return;
+    if (!$countdown) return null;
 
     const $days = document.querySelector("[data-days]");
     const $hours = document.querySelector("[data-hours]");
     const $minutes = document.querySelector("[data-minutes]");
     const $seconds = document.querySelector("[data-seconds]");
 
-    const timestamp = $countdown.getAttribute("data-date");
-    if (!timestamp) return;
-
-    const date = new Date(+timestamp).getTime();
+    const date = new Date(timestamp).getTime();
 
     function updateCountdown() {
       const now = Date.now();
-
       const diff = date - now;
 
-      if ($days instanceof HTMLElement) {
-        $days.innerText = Math.floor(diff / DAY).toString();
+      if (diff <= 0) {
+        if ($days) $days.textContent = '00';
+        if ($hours) $hours.textContent = '00';
+        if ($minutes) $minutes.textContent = '00';
+        if ($seconds) $seconds.textContent = '00';
+        return;
       }
-      if ($hours instanceof HTMLElement) {
-        $hours.innerText = Math.floor((diff % DAY) / HOUR).toString();
-      }
-      if ($minutes instanceof HTMLElement) {
-        $minutes.innerText = Math.floor((diff % HOUR) / MINUTE).toString();
-      }
-      if ($seconds instanceof HTMLElement) {
-        $seconds.innerText = Math.floor((diff % MINUTE) / SECOND).toString();
-      }
+
+      if ($days) $days.textContent = Math.floor(diff / DAY).toString().padStart(2, '0');
+      if ($hours) $hours.textContent = Math.floor((diff % DAY) / HOUR).toString().padStart(2, '0');
+      if ($minutes) $minutes.textContent = Math.floor((diff % HOUR) / MINUTE).toString().padStart(2, '0');
+      if ($seconds) $seconds.textContent = Math.floor((diff % MINUTE) / SECOND).toString().padStart(2, '0');
     }
 
-    setInterval(updateCountdown, SECOND);
+    // Actualizar inmediatamente
+    updateCountdown();
+    
+    // Configurar intervalo para actualizar cada segundo
+    const interval = setInterval(updateCountdown, SECOND);
+    
+    // Retornar función de limpieza
+    return () => clearInterval(interval);
   }
 
+  // Inicializar el contador cuando el componente se monte
+  let cleanup = initCountdown();
+
+  // Reiniciar el contador cuando la navegación SPA ocurra
+  document.addEventListener('astro:after-swap', () => {
+    if (cleanup) cleanup();
+    cleanup = initCountdown();
+  });
+
+  // Limpiar el intervalo cuando el componente se desmonte
+  document.addEventListener('astro:before-swap', () => {
+    if (cleanup) cleanup();
+  });
 </script>
 
 <style is:inline>
@@ -93,5 +110,4 @@ const TIMESTAMP_END = 1761264420000;
     justify-content: center;
     gap: 2px;
   }
-  init();
 </style>
