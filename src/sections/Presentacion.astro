@@ -1,18 +1,16 @@
 ---
 import SectionTitle from "@/components/SectionTitle.astro";
 import LiteYoutube from "@/components/LiteYouTube.astro";
+import Section from "@/components/Section.astro";
 
 const videoId = "t7r5O_5B-E0";
 const title = "Video de presentación de la Velada V";
 
 ---
 
-<section
-  id="presentation"
-  class="w-full h-screen max-sm-[80%] flex flex-col items-center justify-center"
->
+<Section id="presentation" title="Presentación de la Velada V">
   <SectionTitle title="Video de presentación de la Velada V" />
-  <div class="w-[50%] min-w-[80%] h-auto !mt-10">
+  <div class="w-[400px] md:w-[600px] h-auto !mt-10">
     <LiteYoutube
       videoId={videoId}
       title={title}
@@ -21,4 +19,4 @@ const title = "Video de presentación de la Velada V";
   </div>
 
   </div>
-</section>
+</Section>
