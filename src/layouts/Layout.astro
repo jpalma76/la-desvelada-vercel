@@ -6,6 +6,8 @@ import { ClientRouter } from "astro:transitions";
 import Header from "@/sections/Header.astro";
 import Footer from "@/sections/Footer.astro";
 
+import  SpeedInsights  from "@vercel/speed-insights/astro"
+
 ---
 
 <!doctype html>
@@ -45,6 +47,7 @@ import Footer from "@/sections/Footer.astro";
 		<meta name="twitter:title" content="La Desvelada del año V - Version no oficial de La Velada del año V de Ibai Llanos">
 		<meta name="twitter:description" content="Version no oficial de la Velada V, organizado por Ibai Llanos">
 		<ClientRouter />
+		<SpeedInsights />
 	</head>
 	<body>
 		<Header />
